@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <div class="main-container">
+        <div class="left-container">
+            <div class="form-cont">
+                <form action="/" method="post">
+                    <div>
+                        <input class ="input" type="text" name="url" placeholder="Paste a YouTube's video URL here">
+                    </div>
+                    <div>
+                        <select class="select" name="scheme">
+                            <option disabled selected value>Color scheme</option>
+                            <option value="Blues">Blue</option>
+                            <option value="Greens">Green</option>
+                            <option value="Greys">Gray</option>
+                            <option value="Oranges">Orange</option>
+                            <option value="Reds">Red</option>
+                            <option value="Purples">Purple</option>
+                            <option value="rainbow">Rainbow</option>
+                            <option value="seismic">Seismic</option>
+                            <option value="viridis">Viridis</option>
+                            <option value="hsv">HSV</option>
+    
+                        </select>
+                    </div>
+                    <button class="btn">CREATE CLOUD!</button>
+                </form>
+                <button class="btn-save" style="visibility:hidden">SAVE CLOUD!</button>
+            </div>
+        </div>
+
+        <div class="right-container">
+            <img src="static/index.png" width=550px>
+        </div>
+        <div class="info-container">
+            <ul>
+                <li class="bold underline">INFO & STATISTICS</li>
+                <li>
+                    <span>Title: </span>
+                    <span class="bold">{{ stats["title"] }}</span>
+                </li>
+                <li class="bg-lightgray">
+                    <span>Channel: </span>
+                    <span class="bold">{{ stats["channel"] }}</span>
+                </li>
+                <li>
+                    <span>Views: </span>
+                    <span class="bold">{{ stats["views"] }}</span>
+                </li>
+                <li class="bg-lightgray">
+                    <span>Likes: </span>
+                    <span class="bold">{{ stats["likes"] }}</span>
+                </li>
+                <li>
+                    <span>Dislikes: </span>
+                    <span class="bold">{{ stats["dislikes"] }}</span>
+                </li>
+                <li class="bg-lightgray">
+                    <span>Comments: </span>
+                    <span class="bold">{{ stats["comments"] }}</span>
+                </li>
+                <li>
+                    <span>CommentCloud Words: </span>
+                    <span class="bold">{{ totalwords }}</span>
+                </li>              
+            </ul>
+        </div>
+        <div class="video-container"style="display:none">
+            <iframe height="200" src="https://www.youtube.com/embed/{{ videoId }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+{% endblock %}

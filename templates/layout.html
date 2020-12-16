@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+    
+    <html lang="en">
+        <head>
+            <link rel="icon" href="/static/icon_32x32.png">
+            <link rel="stylesheet" href="/static/mystyle.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&display=swap">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
+            <title>CommentCloud: {% block title %}{% endblock %}</title>
+
+        </head>
+        <body>
+            <nav class="navbar-container">
+                <a href="/" style="text-decoration: none;">
+                <div class="logo-container">
+                    <h1>
+                        <span class="logo">
+                            <span class="logoRed">Comment</span>
+                            <span class="logoDarkred">Cloud</span>
+                        </span>
+                        <span class="logoWhite"> for YouTube</span>
+                    </h1>
+                </div>
+                </a>
+                <div class="nav-menu-container">
+                    <h4 class="nav-menu-item"></h4>
+                </div>
+            </nav>
+            
+            {% if get_flashed_messages() %}
+            <header>
+                <div class="flash" role="alert">
+                    {{ get_flashed_messages() | join(" ") }}
+                </div>
+            </header>
+             {% endif %}
+            
+            <main>
+                {% block main %}{% endblock %}
+            </main>
+
+            <footer class="footer">
+                <p>2020. Web app by Danilo Gouvea Silva.</p>
+            </footer>
+
+        </body>
+    </html>
