@@ -1,22 +1,24 @@
-#CommentCloud for Youtube
-version 1.0 
-8 Nov 2020
+# CommentCloud for Youtube
+version 2.0 
+21 Mar 2022
 
 CommentCloud for YouTube is a web application whose purpose is to create colored word clouds using the comments and replies of any public YouTube video. It runs on Flask and communicates with Google API to access the YoutTube comment threads and statistics of Youtube videos.
 
 This web application was created as the final projet for the CS50x 2020.
 
-##Installation
+## Where to find it
 
-The web application naturally does not need installation whenever being hosted online. However, it is not hosted anywhere at the moment and it will only run when served locally (with Live Server extension for VS Code Studio for instance).
+The web application is currently deployed on Heroku and can be accessed on this [link](https://comment-cloud.herokuapp.com/).
 
 CommentCloud was written in Python 3.8.6 and all the modules which were used and their versions can be found in the file 'requirements.txt' in the project root folder. If you want serve the web app locally, it's advisable that you create a virtual environment and install all the requiremtns with the terminal command 'pip install -r requirements.txt'
 
 Also, the application requires a functioning Google API key. A key can be generated on 'console.developers.google.com'.
 
-##Usage
+## Usage
 
-The web app usage if very straightforward: it consists of one page, with two form fields and a button. A second button appears after the first word cloud is generated.
+A video showcasing the web application can be found on this [link](https://youtu.be/yAuOg5duzXk).
+
+The usage if very straightforward: it consists of one page, with two form fields and a button. A second button appears after the first word cloud is generated.
 
 On the first field, the user is supposed to paste (or type in) any YouTube video complete URL as such 'https://www.youtube.com/watch?v=EaOhKg5pKV8'. Any type of string can be inserted in this field. However, the app will point out to the user different error messages in case: 1. the string is not a valid YouTube video URL or 2. the video the URL points too has disabled comments.
 
@@ -28,7 +30,7 @@ After the word cloud is generated and shown on the page, a new button will appea
 
 And that's it!
 
-##Under the hood
+## Under the hood
 
 Written in Python 3.8.6, CommentCloud is powered by the following modules: Flask, Pillow, Numpy, WordCloud and Matplotlib. 
 
@@ -38,7 +40,7 @@ The web app also relies heavily on Regular Expressions to handle the URL provide
 
 Lastly, I choose to do all the page CSS styling by myself instead of using external resources such as Bootstrap and such.
 
-##Author and acknowledgments
+## Author and acknowledgments
 
 This web application was conceived and coded exclusively by myself, Danilo Gouvea Silva.
 
@@ -48,5 +50,5 @@ Special mention do W3schools ('www.w3schools.com'), an awesome resource for HTML
 
 Also, I'd like to register here a huge thank you to Professor David J. Malan, to Doug Lloyd and Bryan Yu, and to the entire CS50x community on Discord, a lively and helpful bunch of people!
 
-##License
+## License
 MIT License
