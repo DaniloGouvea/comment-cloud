@@ -1,1 +1,1 @@
-web: gunicorn comment-cloud.wsgi
+web: gunicorn app:app
